@@ -11,12 +11,11 @@
     <?php
     
     $sqlTodosUsuarios = "SELECT * FROM usuarios";
-
+    // seleciona todos da tabela usuarios
     $resultadoTodosUsuarios = $conn->query($sqlTodosUsuarios);
-
+    // pega o resultado ddo select all from usuarios
     while($linha = $resultadoTodosUsuarios->fetch_assoc()){
-
-    // o fetch assoc
+    // o fetch assoc associa pega as info e separa pelas colunas
 
         echo "  <tr>
                     <td>". $linha['id'] . "</td>
