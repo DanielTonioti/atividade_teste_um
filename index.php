@@ -2,19 +2,24 @@
     session_start();
 
     include("infra/db/connect.php");
-
+    // Chama o arquivo connect para ser executado
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-
+        // verifica o método do formulario
         $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
         
         $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
+        // Verificia a existencia no db
 
         $resultado = $conn->query($sql);
+        //Resultado vai receber o valor
 
         if ($resultado->num_rows > 0){
+            // Verifica a quantidade de colunas
             $_SESSION["usuario"] = $usuario;
+            // compara com o db
             header("Location: public/home.php");
+            // manda para a pagina home
             exit();
         }else{
             $erro = "Usuário ou senha inválidos!";
