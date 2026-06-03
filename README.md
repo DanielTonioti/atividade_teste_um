@@ -1,6 +1,6 @@
 ## Nome do projeto: `Atividade CRUD`
 ## Nome do desenvolvedor: `Daniel Tonioti`
-
+---
 ## Tecnologias Utilizadas
 - Back-end: PHP 8
 - Banco de dados: MySQL
@@ -49,6 +49,7 @@ if(isset($_POST['btn-deletar'])){
 ## Dificuldades
 - Fora encontradas diversas dificuldades pois eu desconhecia o que deveria ser utilizadoe  e a sensibilidade do PHP foi algo que veio a se tornar uma dor de cabeça prévia e após algumas pesquisas para lembrar os comandos de sql e observar o código mais de perto, as dificuldades foram desaparecendo
 
+---
 
 ## Aprendizados
 - Ciclo completo de um CRUD em PHP puro
