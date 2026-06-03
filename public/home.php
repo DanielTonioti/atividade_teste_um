@@ -37,21 +37,14 @@ if(isset($_POST['btn-deletar'])){
         }
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <?php 
-    // Exibe o alerta JavaScript se houver alguma mensagem
-    if(!empty($mensagem)){
-        echo "<script>alert('$mensagem');</script>";
-    }
-    ?>
 </head>
 <body>
-    <h3>Bem-Vindo, <?php echo htmlspecialchars($_SESSION["usuario"]); ?>!</h3>
+        <h3>Bem-Vindo! <?php echo $_SESSION["usuario"]; ?></h3>
     <a href="logout.php">Sair</a>
 
     <hr>
