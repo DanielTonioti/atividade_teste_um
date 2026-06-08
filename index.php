@@ -43,16 +43,15 @@
         <label>Senha:</label>
         <input type="password" name="senha">
         <br>
+        <br>
         <?php
         
             if(isset($erro)){
                 echo $erro;
             };
-
-            // esse erro serve ara alguma coisa
+            
         
         ?>
-        <br>
         <button type="submit">Entrar</button>
     </form>
 

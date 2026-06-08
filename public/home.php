@@ -1,15 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION["usuario"])){
-    header("Location: ../index.php");
-    exit();
-}
+include("components/verifica.php");
 
 include("../infra/db/connect.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $novoUsuario = $_POST['usuario'];
-    $novaSenha = $_POST['senha'];
+    include("components/novo-usuario.php");
 
     $sql = "INSERT INTO usuarios (usuario,senha) 
     VALUES ('$novoUsuario','$novaSenha')";  
@@ -31,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Home</title>
 </head>
 <body>
-    <h3>Bem-Vindo! <?php echo $_SESSION["usuario"]; ?></h3>
+    <h3>Bem-Vindo, <?php echo $_SESSION["usuario"]; ?>!</h3>
     <a href="logout.php"> Sair</a>
 
     <hr>
@@ -43,6 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <label>Senha:</label>
         <input type="password" name="senha">
         <br>
+        <br>
         <?php
         
             if(isset($erro)){
@@ -50,7 +47,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             };
         
         ?>
-        <br>
         <button type="submit">Cadastrar</button>
     </form>
     <hr>

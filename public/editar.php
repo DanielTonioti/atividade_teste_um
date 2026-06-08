@@ -2,10 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION["usuario"])){
-    header("Location: ../index.php");
-    exit();
-}
+include("components/verifica.php");
 
 include("../infra/db/connect.php");
 
@@ -13,11 +10,11 @@ $id = $_GET["id"];
 
 $sql = "SELECT * FROM usuarios WHERE id = $id";
 $resultado = $conn -> query($sql);
+
 $usuario = $resultado -> fetch_assoc();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $novoUsuario = $_POST["usuario"];
-    $novaSenha = $_POST["senha"];
+    include("components/novo-usuario.php");
 
     $sqlUpdate = " UPDATE usuarios SET usuario = '$novoUsuario', senha = '$novaSenha' WHERE id = $id";
 
