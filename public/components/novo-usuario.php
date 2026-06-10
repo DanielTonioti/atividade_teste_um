@@ -1,4 +1,4 @@
 <?php
-    $novoUsuario = $_POST['usuario'];
-    $novaSenha = $_POST['senha'];
+$novoUsuario = $_POST['usuario'];
+$novaSenha = $_POST['senha'];
 ?>

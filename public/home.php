@@ -4,28 +4,31 @@ include("components/verifica.php");
 
 include("../infra/db/connect.php");
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include("components/novo-usuario.php");
 
     $sql = "INSERT INTO usuarios (usuario,senha) 
-    VALUES ('$novoUsuario','$novaSenha')";  
+    VALUES ('$novoUsuario','$novaSenha')";
 
-    if($conn->query($sql) === TRUE){
+    if ($conn->query($sql) === TRUE) {
         echo "<script> alert('Usuário cadastrado com sucesso!')</script>";
-    }else{
+    } else {
         echo "<script> alert('Erro ao cadastrar')</script>";
     }
 
-};
+}
+;
 
 ?>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+
 <body>
     <h3>Bem-Vindo, <?php echo $_SESSION["usuario"]; ?>!</h3>
     <a href="logout.php"> Sair</a>
@@ -41,22 +44,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <br>
         <br>
         <?php
-        
-            if(isset($erro)){
-                echo $erro;
-            };
-        
+
+        if (isset($erro)) {
+            echo $erro;
+        }
+        ;
+
         ?>
         <button type="submit">Cadastrar</button>
     </form>
     <hr>
     <?php
-    
+
     include("components/table.php")
 
-    ?>
+        ?>
 
 
 
 </body>
+
 </html>
