@@ -1,10 +1,9 @@
 ## Nome do projeto: `Atividade CRUD`
 ## Nome do desenvolvedor: `Daniel Tonioti`
----
 ## Tecnologias Utilizadas
-- Back-end: PHP 8
+- Back-end: PHP
 - Banco de dados: MySQL
-- Front-end: HTML5
+- Front-end: HTML
 - Autenticação: PHP Sessions
 - Servidor local: Apache / XAMPP
 ---
@@ -45,6 +44,12 @@ if(isset($_POST['btn-deletar'])){
 - `README.md` — atualizado com documentação da nova funcionalidade
 
 ---
+## Arquivos alterados na atividade 3
+- `home.php` - Estilização, confirmação de exclusão de usuario.
+- `README.md` - Atualizado com as alterações da ultima atividade
+- `editar.php` - Estilização feita
+- `components` - Arquivo `table.php` escondendo as senhas
+---
 
 ## Dificuldades
 - Fora encontradas diversas dificuldades pois eu desconhecia o que deveria ser utilizadoe  e a sensibilidade do PHP foi algo que veio a se tornar uma dor de cabeça prévia e após algumas pesquisas para lembrar os comandos de sql e observar o código mais de perto, as dificuldades foram desaparecendo
@@ -52,6 +57,7 @@ if(isset($_POST['btn-deletar'])){
 ---
 
 ## Aprendizados
-- Ciclo completo de um CRUD em PHP puro
-- Uso de sessões para autenticação de usuários
+- Implementação completa de um sistema CRUD em PHP puro.
+- Uso de sessões para autenticação de usuários.
 - Integração entre formulários HTML e queries SQL.
+- Melhoria na segurança e usabilidade do sistema.
