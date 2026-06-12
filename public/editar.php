@@ -41,22 +41,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="justify-content-center flex-column d-flex align-items-center">
-    
-            <div class="w-25">
 
-                <h2>Editar Usuário</h2>
-                <form method="POST">
-                    <div class="mb-3">
-                        <label class="form-label">Usuário:</labe l>
-                        <input type="text" class="form-control" name="usuario" value=" <?php echo $usuario['usuario'] ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Senha:</label>
-                        <input type="password" class="form-control" name="senha" value=" <?php echo $usuario['senha'] ?>">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </form>
-            </div>
+        <div class="w-25">
+
+            <h2>Editar Usuário</h2>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Usuário:</label>
+                    <input type="text" class="form-control" name="usuario" value=" <?php echo $usuario['usuario'] ?>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Senha:</label>
+                    <input type="password" class="form-control" name="senha" value=" <?php echo $usuario['senha'] ?>">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
     </div>
 
 </body>

@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main>
 
         <div class="justify-content-center flex-column d-flex align-items-center">
-    
+
             <div class="w-25">
                 <h4 class="text-center">Cadastro de Novo Usuário.</h4>
                 <form method="POST">
@@ -58,27 +58,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="password" class="form-control" name="senha">
                     </div>
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <?php
-        
-                if (isset($erro)) {
-                    echo $erro;
-                }
-                ;
-        
-                ?>
+                        <?php
+
+                        if (isset($erro)) {
+                            echo $erro;
+                        }
+                        ;
+
+                        ?>
                 </form>
             </div>
         </div>
         <hr>
         <div class=" d-flex flex-column justify-content-centeralign-items-center">
-        <?php
-        
-        include("components/table.php")
-    
-            ?>
+            <?php
+
+            include("components/table.php")
+
+                ?>
         </div>
 
-    </main>    
+    </main>
 
 
 </body>
